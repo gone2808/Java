@@ -15,16 +15,12 @@ import java.util.regex.Pattern;
 public class BaseNumber {
     
     public static String BaseConvertion(String inBase,String s,String outbase){
-        try {
             if (inBase.equalsIgnoreCase(outbase)) {
                 return s;
             }
             return Integer.toString(
                     Integer.parseInt(s, Integer.parseInt(inBase)), Integer.parseInt(outbase)
-            );
-        } catch (NumberFormatException numberFormatException) {
-        return null;
-        }
+            );    
     }
     
     public static String Base(String msg){
@@ -34,9 +30,10 @@ public class BaseNumber {
             System.out.println(msg);
             try {
                 s=sc.nextLine();
-                if(s.equalsIgnoreCase("2") || s.equalsIgnoreCase("10") || s.equalsIgnoreCase("16") || s.equalsIgnoreCase("8"));
+                if(s.equalsIgnoreCase("2") || s.equalsIgnoreCase("10") || s.equalsIgnoreCase("16") || s.equalsIgnoreCase("8"))
                     return s;
             } catch (Exception e) {
+                System.out.println(e);
             }
         } while (true);
     }
@@ -57,7 +54,7 @@ public class BaseNumber {
                 }
                 if (inBase.equalsIgnoreCase("16")) {
                     
-                    return getDec("Input Hex: ");
+                    return getHex("Input Hex: ");
                 }
                 
             } catch (Exception e) {
@@ -103,7 +100,7 @@ public class BaseNumber {
     }
     public static String getHex(String msg){
         Scanner sc = new Scanner(System.in);
-        String Hex_pattern="^[0-9a-fA-F]+$";
+        String Hex_pattern="^[\\da-fA-F]+$";
         String x;
         do{
             System.out.println(msg);
