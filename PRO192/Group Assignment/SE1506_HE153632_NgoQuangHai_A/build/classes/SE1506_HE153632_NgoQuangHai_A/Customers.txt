@@ -1,0 +1,4 @@
+1	101	Nguyen Van An	12
+2   	101	Nguyen Van Hanh	20
+3	102	Nguyen Tuan Anh	50
+4	100	Tran Thao Van	19
