@@ -1,4 +1,4 @@
-# SE/AI/IA Semester 3 (K15)
+# SE/AI/IA (K15)
 
 ## Java
 
