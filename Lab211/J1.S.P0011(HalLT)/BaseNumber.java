@@ -174,20 +174,22 @@ public class BaseNumber {
                     throw new BaseException("Wrong format");
                 i++;
             }
+            
+            
             multmin = limit / radix;
             while (i < len) {
 
                 digit = Character.digit(s.charAt(i++), radix);
-                // System.out.println("Check: "+digit);
-                // if (digit < 0) {
-                // throw new BaseException("");
-                // }
+//                 System.out.println("Check: "+digit);
+//                if (digit < 0) {
+//                    throw new BaseException("");
+//                }
                 if (result < multmin) {
                     throw new BaseException("Out of Limits");
                 }
                 result *= radix;
                 if (result < limit + digit) {
-                    throw new BaseException("");
+                    throw new BaseException("Out of Limits");
                 }
                 result -= digit;
             }
@@ -249,7 +251,8 @@ public class BaseNumber {
                     temp = "1" + temp;
                 }
             }
-            // System.out.println(temp);
+
+//             System.out.println(temp);
             return Negative ? (-1) * MyparseInt(temp, 2) : MyparseInt(temp, 2);
         }
     }
